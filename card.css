@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  --dark: #ffffff;
+  --red: #408080;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.name {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.business2 {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #131417;
+}
+
+.business2 .front,
+.business2 .back {
+  background-color: var(--dark);
+  width: 280px;
+  height: 480px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: absolute;
+  border: 1px solid #f1f1f1;
+  border-radius: 25px;
+}
+
+.business2 svg {
+    fill: #e5e4e4;
+    width: 50px;
+}
+
+.business2 h1,
+.business2 h2,
+.business2 p {
+  margin: 0;
+  color: #0A3200;
+}
+
+a {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 0.8rem;
+  margin: 5px 0;
+  font-weight: 500;
+  color: #0A3200;
+  text-decoration: none;
+}
+
+.b {
+  font-size: 16px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  margin-top: 30%;
+  color: var(--red);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.b:hover {
+  text-decoration: underline;
+}
+
+.business2 .red {
+  height: 35%;
+  background-color: var(--red);
+}
+
+.business2 .head {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.business2 .head img {
+  width: 40px;
+}
+
+.business2 .head > div {
+  text-align: center;
+  margin: 0 10px;
+  text-transform: uppercase;
+}
+
+.business2 .head > div p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.business2 .avatar {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+.business2 .img {
+  background-color: #bfc2c7;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 6px solid var(--dark);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.business2 .name p:nth-of-type(1) {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.business2 .infos {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.business2 .infos > div {
+  display: flex;
+  margin: 5px;
+}
+
+.business2 .infos > div svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-color: var(--red);
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.business2 .infos > div p {
+  font-size: 0.8rem;
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* back*/
+.business2 .back .top {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  background-color: var(--red);
+  position: relative;
+}
+
+
+.hyperlink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.webicon {
+  background-color: var(--dark);
+  border-radius: 50%;
+  width: 70%;
+  padding: 20px 0;
+  position: absolute;
+  top: calc(70% - 40px);
+  left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.webicon div {
+  background-color: white;
+  overflow: clip;
+  border-radius: 50%;
+  padding: 5px 4px 2px 5px;
+}
+
+.business2 .back > p {
+  text-align: center;
+  margin-top: 30%;
+  color: var(--red);
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: fit-content;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: fit-content;
+  height: 480px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
