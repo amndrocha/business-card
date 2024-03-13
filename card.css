@@ -80,6 +80,9 @@ a {
 .b:hover {
   text-decoration: underline;
 }
+.hover-underline:hover {
+  text-decoration: underline;
+}
 
 .business2 .red {
   height: 35%;
