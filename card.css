@@ -3,6 +3,7 @@
 * {
   --dark: #ffffff;
   --red: #408080;
+  overflow: hidden;
 }
 
 body, html {
